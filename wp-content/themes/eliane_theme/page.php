@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php the_title(); ?></h1>
+			<h3><?php the_title(); ?></h3>
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -13,11 +13,8 @@
 
 				<?php the_content(); ?>
 
-				<?php comments_template( '', true ); // Remove if you don't want comments ?>
-
 				<br class="clear">
 
-				<?php edit_post_link(); ?>
 
 			</article>
 			<!-- /article -->
@@ -40,7 +37,6 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/slideLp.js" type="text/javascript"></script>

@@ -521,14 +521,12 @@ function wp_get_update_data() {
 	$counts = array( 'plugins' => 0, 'themes' => 0, 'wordpress' => 0, 'translations' => 0 );
 
 	if ( $plugins = current_user_can( 'update_plugins' ) ) {
-		wp_update_plugins(); // Check for Plugin updates
 		$update_plugins = get_site_transient( 'update_plugins' );
 		if ( ! empty( $update_plugins->response ) )
 			$counts['plugins'] = count( $update_plugins->response );
 	}
 
 	if ( $themes = current_user_can( 'update_themes' ) ) {
-		wp_update_themes(); // Check for Theme updates
 		$update_themes = get_site_transient( 'update_themes' );
 		if ( ! empty( $update_themes->response ) )
 			$counts['themes'] = count( $update_themes->response );
@@ -635,19 +633,8 @@ function wp_schedule_update_checks() {
 	if ( !wp_next_scheduled('wp_update_themes') && !defined('WP_INSTALLING') )
 		wp_schedule_event(time(), 'twicedaily', 'wp_update_themes');
 
-	if ( ! wp_next_scheduled( 'wp_maybe_auto_update' ) && ! defined( 'WP_INSTALLING' ) ) {
-		// Schedule auto updates for 7 a.m. and 7 p.m. in the timezone of the site.
-		$next = strtotime( 'today 7am' );
-		$now = time();
-		// Find the next instance of 7 a.m. or 7 p.m., but skip it if it is within 3 hours from now.
-		while ( ( $now + 3 * HOUR_IN_SECONDS ) > $next ) {
-			$next += 12 * HOUR_IN_SECONDS;
-		}
-		$next = $next - get_option( 'gmt_offset' ) * HOUR_IN_SECONDS;
-		// Add a random number of minutes, so we don't have all sites trying to update exactly on the hour
-		$next = $next + rand( 0, 59 ) * MINUTE_IN_SECONDS;
-		wp_schedule_event( $next, 'twicedaily', 'wp_maybe_auto_update' );
-	}
+	if ( ( wp_next_scheduled( 'wp_maybe_auto_update' ) > ( time() + HOUR_IN_SECONDS ) ) && ! defined('WP_INSTALLING') )
+		wp_clear_scheduled_hook( 'wp_maybe_auto_update' );
 }
 
 /**
