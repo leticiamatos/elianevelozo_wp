@@ -1,11 +1,9 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-				<p class="email">
-					email@elianevelozo.com		
-				</p>
+
 				<!-- copyright -->
 				<p class="copyright">
-					Copyright ©  <?php the_time('Y') ?> Eliane Velozo | Todos os direitos reservados 
+		
 				</p>
 				<!-- /copyright -->
 

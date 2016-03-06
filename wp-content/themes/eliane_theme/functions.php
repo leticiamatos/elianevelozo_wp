@@ -118,8 +118,6 @@ function html5blank_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
-    wp_register_style('reset', get_template_directory_uri() . '/style/reset.css', array(), '1.0', 'all');
-    wp_enqueue_style('reset'); // Enqueue it!
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
@@ -451,12 +449,4 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
     return '<h2>' . $content . '</h2>';
 }
 
-
-// Limit excerpt
-    function custom_excerpt_length( $length ) {
-        return 15;
-    }
-    add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 ?>
-
-

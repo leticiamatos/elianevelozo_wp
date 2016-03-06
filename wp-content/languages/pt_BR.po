@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-01-21 11:05:23+0000\n"
+"PO-Revision-Date: 2015-01-05 20:15:34+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -15,16 +15,6 @@ msgstr ""
 msgctxt "text direction"
 msgid "ltr"
 msgstr "ltr"
-
-#: wp-includes/link-template.php:2314
-msgctxt "next post"
-msgid "Next"
-msgstr "Próximo"
-
-#: wp-includes/link-template.php:2313
-msgctxt "previous post"
-msgid "Previous"
-msgstr "Anterior"
 
 #: wp-includes/class-wp-editor.php:998
 #: wp-includes/js/tinymce/wp-mce-help.php:118 wp-includes/script-loader.php:98
@@ -73,7 +63,7 @@ msgid "Focus shortcuts:"
 msgstr "Atalhos de foco:"
 
 #. translators: 1: month, 2: day of month
-#: wp-includes/date.php:449
+#: wp-includes/date.php:437
 msgid "The following values do not describe a valid date: month %1$s, day %2$s."
 msgstr "Os seguintes valores não descrevem uma data válida: mês %1$s, dia %2$s."
 
@@ -149,6 +139,10 @@ msgstr "Lixo"
 msgctxt "verb"
 msgid "Trash"
 msgstr "Lixeira"
+
+#: wp-includes/link-template.php:2313
+msgid "Previous"
+msgstr "Anterior"
 
 #: wp-includes/link-template.php:2259
 msgid "Newer posts"
@@ -270,7 +264,7 @@ msgid "Add to Dictionary"
 msgstr "Adicionar ao Dicionário"
 
 #. translators: 1: year, 2: month, 3: day of month
-#: wp-includes/date.php:432
+#: wp-includes/date.php:420
 msgid "The following values do not describe a valid date: year %1$s, month %2$s, day %3$s."
 msgstr "Os seguintes valores não correspondem a uma data válida: ano %1$s, mês %2$s, dia %3$s."
 
@@ -313,7 +307,7 @@ msgstr "Não passe tags de estilo para wp_add_inline_style()."
 
 #. translators: Date query invalid date message: 1: invalid value, 2: type of
 #. value, 3: minimum valid value, 4: maximum valid value
-#: wp-includes/date.php:402
+#: wp-includes/date.php:391
 msgid "Invalid value %1$s for %2$s. Expected value should be between %3$s and %4$s."
 msgstr "%1$s é um valor inválido para %2$s. O valor esperado deve ser entre %3$s e %4$s."
 
@@ -746,6 +740,10 @@ msgctxt "Move widget"
 msgid "Move"
 msgstr "Mover"
 
+#: wp-includes/class-wp-customize-control.php:1000
+msgid "Set image"
+msgstr "Definir Imagem"
+
 #. translators: Hide as in hide header image via the Customizer
 #: wp-includes/class-wp-customize-control.php:1081
 msgctxt "custom header"
@@ -788,10 +786,6 @@ msgstr "Títulos"
 #: wp-includes/class-wp-customize-widgets.php:763
 msgid "Search widgets&hellip;"
 msgstr "Buscar widgets&hellip;"
-
-#: wp-includes/class-wp-customize-control.php:1000
-msgid "Set image"
-msgstr "Definir imagem"
 
 #: wp-includes/media-template.php:1064 wp-includes/media-template.php:1154
 msgctxt "auto preload"
@@ -1546,22 +1540,22 @@ msgctxt "custom headers"
 msgid "Previously uploaded"
 msgstr "Enviado anteriormente"
 
-#: wp-includes/general-template.php:2793
+#: wp-includes/general-template.php:2780
 msgctxt "admin color scheme"
 msgid "Sunrise"
 msgstr "Amanhecer"
 
-#: wp-includes/general-template.php:2799
+#: wp-includes/general-template.php:2786
 msgctxt "admin color scheme"
 msgid "Ectoplasm"
 msgstr "Ectoplasma"
 
-#: wp-includes/general-template.php:2805
+#: wp-includes/general-template.php:2792
 msgctxt "admin color scheme"
 msgid "Ocean"
 msgstr "Oceano"
 
-#: wp-includes/general-template.php:2811
+#: wp-includes/general-template.php:2798
 msgctxt "admin color scheme"
 msgid "Coffee"
 msgstr "Café"
@@ -1626,17 +1620,17 @@ msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "ativo"
 
-#: wp-includes/general-template.php:2765
+#: wp-includes/general-template.php:2752
 msgctxt "admin color scheme"
 msgid "Default"
 msgstr "Padrão"
 
-#: wp-includes/general-template.php:2775
+#: wp-includes/general-template.php:2762
 msgctxt "admin color scheme"
 msgid "Light"
 msgstr "Claro"
 
-#: wp-includes/general-template.php:2787
+#: wp-includes/general-template.php:2774
 msgctxt "admin color scheme"
 msgid "Midnight"
 msgstr "Meia-noite"
@@ -1658,7 +1652,7 @@ msgstr "nenhum subconjunto"
 msgid "Menu"
 msgstr "Menu"
 
-#: wp-includes/update.php:553
+#: wp-includes/update.php:555
 msgid "Translation Updates"
 msgstr "Atualizações de Tradução"
 
@@ -1954,7 +1948,7 @@ msgstr "selecionadas: %d"
 
 #: wp-includes/media.php:2963
 msgid "Set Featured Image"
-msgstr "Definir imagem destacada"
+msgstr "Configurar imagem destacada"
 
 #: wp-includes/default-widgets.php:197
 msgctxt "Links widget"
@@ -2423,11 +2417,11 @@ msgstr "Texto"
 msgid "Hex Value"
 msgstr "Valor hexadecimal"
 
-#: wp-includes/class-wp-customize-manager.php:1056
+#: wp-includes/class-wp-customize-manager.php:1033
 msgid "Header Text Color"
 msgstr "Cor do texto do cabeçalho"
 
-#: wp-includes/class-wp-customize-manager.php:1034
+#: wp-includes/class-wp-customize-manager.php:1011
 msgid "Colors"
 msgstr "Cores"
 
@@ -2460,12 +2454,12 @@ msgstr "Argumentos insuficientes foram passados para este método XML-RPC."
 msgid "Sorry, you cannot stick a private post."
 msgstr "Não é possível fixar um post privado."
 
-#: wp-includes/class-wp-customize-manager.php:1181
+#: wp-includes/class-wp-customize-manager.php:1158
 msgid "You can edit your menu content on the Menus screen in the Appearance section."
 msgstr "Você pode editar o conteúdo do menu em Aparência &rarr; Menus."
 
 #: wp-includes/class-wp-customize-control.php:925
-#: wp-includes/class-wp-customize-manager.php:1079
+#: wp-includes/class-wp-customize-manager.php:1056
 msgid "Header Image"
 msgstr "Imagem do Cabeçalho"
 
@@ -2509,32 +2503,32 @@ msgstr "O nome do site deve ter pelo menos 4 caracteres."
 msgid "Please enter a site title."
 msgstr "Digite um título para o site."
 
-#: wp-includes/class-wp-customize-manager.php:1230
+#: wp-includes/class-wp-customize-manager.php:1207
 msgid "A static page"
 msgstr "Uma página estática"
 
-#: wp-includes/class-wp-customize-manager.php:1050
+#: wp-includes/class-wp-customize-manager.php:1027
 msgid "Display Header Text"
 msgstr "Mostrar texto do cabeçalho"
 
-#: wp-includes/class-wp-customize-manager.php:1071
+#: wp-includes/class-wp-customize-manager.php:1048
 msgid "Background Color"
 msgstr "Cor de fundo"
 
 #: wp-includes/class-wp-customize-control.php:894
-#: wp-includes/class-wp-customize-manager.php:1099
+#: wp-includes/class-wp-customize-manager.php:1076
 msgid "Background Image"
 msgstr "Imagem de fundo"
 
-#: wp-includes/class-wp-customize-manager.php:1138
+#: wp-includes/class-wp-customize-manager.php:1115
 msgid "Background Position"
 msgstr "Posição do fundo"
 
-#: wp-includes/class-wp-customize-manager.php:1121
+#: wp-includes/class-wp-customize-manager.php:1098
 msgid "Background Repeat"
 msgstr "Repetição do fundo"
 
-#: wp-includes/class-wp-customize-manager.php:1154
+#: wp-includes/class-wp-customize-manager.php:1131
 msgid "Background Attachment"
 msgstr "Fixação do fundo"
 
@@ -2546,35 +2540,35 @@ msgstr "Mudar a imagem"
 msgid "Sorry, you are not allowed to edit this post type."
 msgstr "Sem permissão para editar este tipo de post."
 
-#: wp-includes/class-wp-customize-manager.php:1125
+#: wp-includes/class-wp-customize-manager.php:1102
 msgid "No Repeat"
 msgstr "Sem Repetição"
 
-#: wp-includes/class-wp-customize-manager.php:1158
+#: wp-includes/class-wp-customize-manager.php:1135
 msgid "Scroll"
 msgstr "Rolar"
 
-#: wp-includes/class-wp-customize-manager.php:1159
+#: wp-includes/class-wp-customize-manager.php:1136
 msgid "Fixed"
 msgstr "Fixo"
 
-#: wp-includes/class-wp-customize-manager.php:1127
+#: wp-includes/class-wp-customize-manager.php:1104
 msgid "Tile Horizontally"
 msgstr "Repetir Horizontalmente"
 
-#: wp-includes/class-wp-customize-manager.php:1128
+#: wp-includes/class-wp-customize-manager.php:1105
 msgid "Tile Vertically"
 msgstr "Repetir Verticalmente"
 
-#: wp-includes/class-wp-customize-manager.php:1126
+#: wp-includes/class-wp-customize-manager.php:1103
 msgid "Tile"
 msgstr "Repetir"
 
-#: wp-includes/class-wp-customize-manager.php:1241
+#: wp-includes/class-wp-customize-manager.php:1218
 msgid "Front page"
 msgstr "Página inicial"
 
-#: wp-includes/class-wp-customize-manager.php:1253
+#: wp-includes/class-wp-customize-manager.php:1230
 msgid "Posts page"
 msgstr "Página de posts"
 
@@ -2682,43 +2676,43 @@ msgstr "O tema \"%s\" não é um tema pai válido."
 msgid "ERROR: The themes directory is either empty or doesn&#8217;t exist. Please check your installation."
 msgstr "ERRO: O diretório de temas está vazio ou não existe. Confira sua instalação."
 
-#: wp-includes/class-wp-customize-manager.php:1211
+#: wp-includes/class-wp-customize-manager.php:1188
 msgid "Static Front Page"
 msgstr "Página Inicial Estática"
 
-#: wp-includes/class-wp-customize-manager.php:1214
+#: wp-includes/class-wp-customize-manager.php:1191
 msgid "Your theme supports a static front page."
 msgstr "Seu tema suporta uma página inicial estática."
 
-#: wp-includes/class-wp-customize-manager.php:1229
+#: wp-includes/class-wp-customize-manager.php:1206
 msgid "Your latest posts"
 msgstr "Seus posts recentes"
 
-#: wp-includes/class-wp-customize-manager.php:1178
+#: wp-includes/class-wp-customize-manager.php:1155
 msgid "Navigation"
 msgstr "Navegação"
 
-#: wp-includes/class-wp-customize-manager.php:1181
+#: wp-includes/class-wp-customize-manager.php:1158
 msgid "Your theme supports %s menu. Select which menu you would like to use."
 msgid_plural "Your theme supports %s menus. Select which menu appears in each location."
 msgstr[0] "Seu tema suporta %s menu. Selecione qual menu gostaria de usar."
 msgstr[1] "Seu tema suporta %s menus. Selecione qual menu gostaria de usar em cada lugar."
 
-#: wp-includes/class-wp-customize-manager.php:1005
+#: wp-includes/class-wp-customize-manager.php:982
 msgid "Site Title & Tagline"
 msgstr "Título & descrição do site"
 
 #: wp-includes/class-wp-customize-control.php:475
-#: wp-includes/class-wp-customize-manager.php:1185
+#: wp-includes/class-wp-customize-manager.php:1162
 #: wp-includes/default-widgets.php:1362
 msgid "&mdash; Select &mdash;"
 msgstr "&mdash; Selecionar &mdash;"
 
-#: wp-includes/class-wp-customize-manager.php:1225
+#: wp-includes/class-wp-customize-manager.php:1202
 msgid "Front page displays"
 msgstr "A página inicial mostra"
 
-#: wp-includes/class-wp-customize-manager.php:1027
+#: wp-includes/class-wp-customize-manager.php:1004
 msgid "Tagline"
 msgstr "Descrição"
 
@@ -3035,7 +3029,7 @@ msgstr "Documentação"
 msgid "Support Forums"
 msgstr "Fóruns de Suporte"
 
-#: wp-includes/formatting.php:2598 wp-includes/general-template.php:2691
+#: wp-includes/formatting.php:2598 wp-includes/general-template.php:2678
 msgid "&hellip;"
 msgstr "&hellip;"
 
@@ -3111,7 +3105,7 @@ msgstr "Este arquivo não é uma imagem. Tente outro."
 msgid "This is larger than the maximum size. Please try another."
 msgstr "Isto é maior do que o tamanho máximo. Tente outro."
 
-#: wp-includes/general-template.php:2781
+#: wp-includes/general-template.php:2768
 msgctxt "admin color scheme"
 msgid "Blue"
 msgstr "Azul"
@@ -4123,17 +4117,17 @@ msgstr ""
 msgid "This is the short link."
 msgstr "Este é o link encurtado."
 
-#: wp-includes/update.php:547
+#: wp-includes/update.php:549
 msgid "%d WordPress Update"
 msgstr "%d Atualização do WordPress"
 
-#: wp-includes/update.php:549
+#: wp-includes/update.php:551
 msgid "%d Plugin Update"
 msgid_plural "%d Plugin Updates"
 msgstr[0] "%d atualização de plugin"
 msgstr[1] "%d atualizações de plugin"
 
-#: wp-includes/update.php:551
+#: wp-includes/update.php:553
 msgid "%d Theme Update"
 msgid_plural "%d Theme Updates"
 msgstr[0] "%d atualização de temas"
@@ -4798,11 +4792,11 @@ msgstr "%1$s %2$s Feed dos Posts de %3$s"
 msgid "%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed"
 msgstr "%1$s %2$s Feed do resultado da busca por &#8220;%3$s&#8221;"
 
-#: wp-includes/general-template.php:2612
+#: wp-includes/general-template.php:2614
 msgid "&laquo; Previous"
 msgstr "&laquo; Anterior"
 
-#: wp-includes/general-template.php:2613
+#: wp-includes/general-template.php:2615
 msgid "Next &raquo;"
 msgstr "Próximo &raquo;"
 
@@ -5673,6 +5667,10 @@ msgstr "Informação do plugin:"
 msgid "Saving..."
 msgstr "Salvando..."
 
+#: wp-includes/script-loader.php:534
+msgid "Could not set that as the thumbnail image. Try a different attachment."
+msgstr "Não foi possível configurar este anexo como a imagem miniatura. Tente um anexo diferente."
+
 #: wp-includes/script-loader.php:464
 msgid "Saving Draft&#8230;"
 msgstr "Salvando rascunho&hellip;"
@@ -6045,7 +6043,7 @@ msgstr "Resumo de pingback:"
 msgid "Just a username, please."
 msgstr "Apenas um nome de usuário."
 
-#: wp-signup.php:453
+#: wp-includes/link-template.php:2314 wp-signup.php:453
 msgid "Next"
 msgstr "Seguinte"
 
@@ -6182,6 +6180,10 @@ msgstr "Esse arquivo está vazio. Tente outro."
 msgid "There was a configuration error. Please contact the server administrator."
 msgstr "Erro de configuração. Contate o administrador do servidor."
 
+#: wp-login.php:337
+msgid "Password reset is not allowed for this user"
+msgstr "Esse usuário não possui permissão para reconfigurar senha"
+
 #: wp-includes/user.php:2224
 msgid "<strong>ERROR</strong>: Please type your e-mail address."
 msgstr "<strong>ERRO</strong>: Preencha seu endereço de email."
@@ -6214,14 +6216,6 @@ msgstr "Sair"
 #: wp-includes/general-template.php:392 wp-login.php:891
 msgid "Remember Me"
 msgstr "Lembrar-me"
-
-#: wp-login.php:337
-msgid "Password reset is not allowed for this user"
-msgstr "Esse usuário não possui permissão para redefinir senha"
-
-#: wp-includes/script-loader.php:534
-msgid "Could not set that as the thumbnail image. Try a different attachment."
-msgstr "Não foi possível definir este anexo como a imagem miniatura. Tente um anexo diferente."
 
 #: wp-includes/ms-load.php:411
 msgid "What do I do now?"
@@ -6483,6 +6477,79 @@ msgstr "Favoritos"
 msgid "No categories"
 msgstr "Nenhuma categoria"
 
+#: wp-includes/class-pop3.php:82
+msgid "No server specified"
+msgstr "Nenhum servidor especificado"
+
+#: wp-includes/class-pop3.php:90 wp-includes/class-pop3.php:102
+#: wp-includes/class-pop3.php:123 wp-includes/class-pop3.php:246
+#: wp-includes/class-pop3.php:300 wp-includes/class-pop3.php:311
+#: wp-includes/class-pop3.php:359 wp-includes/class-pop3.php:393
+#: wp-includes/class-pop3.php:426 wp-includes/class-pop3.php:525
+#: wp-includes/class-pop3.php:548
+msgid "Error "
+msgstr "Erro"
+
+#: wp-includes/class-pop3.php:115
+msgid "no login ID submitted"
+msgstr "nenhuma ID de login enviada"
+
+#: wp-includes/class-pop3.php:118 wp-includes/class-pop3.php:138
+msgid "connection not established"
+msgstr "conexão não estabelecida"
+
+#: wp-includes/class-pop3.php:135 wp-includes/class-pop3.php:171
+msgid "No password submitted"
+msgstr "Nenhuma senha enviada"
+
+#: wp-includes/class-pop3.php:143
+msgid "Authentication failed"
+msgstr "A autenticação falhou"
+
+#: wp-includes/class-pop3.php:162 wp-includes/class-pop3.php:205
+#: wp-includes/class-pop3.php:230 wp-includes/class-pop3.php:272
+#: wp-includes/class-pop3.php:346 wp-includes/class-pop3.php:386
+#: wp-includes/class-pop3.php:416 wp-includes/class-pop3.php:450
+#: wp-includes/class-pop3.php:513 wp-includes/class-pop3.php:578
+msgid "No connection to server"
+msgstr "Sem conexão com o servidor"
+
+#: wp-includes/class-pop3.php:168
+msgid "No login ID submitted"
+msgstr "Nenhuma ID de login enviada"
+
+#: wp-includes/class-pop3.php:176
+msgid "No server banner"
+msgstr "Nenhum banner do servidor"
+
+#: wp-includes/class-pop3.php:176 wp-includes/class-pop3.php:186
+msgid "abort"
+msgstr "abortar"
+
+#: wp-includes/class-pop3.php:186
+msgid "apop authentication failed"
+msgstr "A autenticação apop falhou"
+
+#: wp-includes/class-pop3.php:323
+msgid "Premature end of list"
+msgstr "Fim de lista prematuro"
+
+#: wp-includes/class-pop3.php:456
+msgid "Empty command string"
+msgstr "Linha de comando vazia"
+
+#: wp-includes/class-pop3.php:476
+msgid "connection does not exist"
+msgstr "conexão não existe."
+
+#: wp-includes/class-pop3.php:583
+msgid "No msg number submitted"
+msgstr "Nenhum número msg enviado"
+
+#: wp-includes/class-pop3.php:589
+msgid "Command failed "
+msgstr "O comando falhou"
+
 #: wp-includes/category-template.php:998
 msgid "Feed for all posts filed under %s"
 msgstr "Feed para todos os posts arquivados em %s"
@@ -6545,7 +6612,7 @@ msgstr "Fraca"
 msgid "Strong"
 msgstr "Forte"
 
-#: wp-includes/class-wp-customize-manager.php:1016
+#: wp-includes/class-wp-customize-manager.php:993
 #: wp-includes/class-wp-xmlrpc-server.php:430
 msgid "Site Title"
 msgstr "Título do site"
@@ -6857,19 +6924,19 @@ msgstr "O arquivo &#8220;%s&#8221; não é uma imagem."
 msgid "Saved."
 msgstr "Salvo."
 
-#: wp-includes/class-wp-customize-manager.php:1142
+#: wp-includes/class-wp-customize-manager.php:1119
 #: wp-includes/class-wp-editor.php:952 wp-includes/media-template.php:600
 #: wp-includes/media-template.php:831 wp-includes/media-template.php:897
 msgid "Left"
 msgstr "Esquerda"
 
-#: wp-includes/class-wp-customize-manager.php:1143
+#: wp-includes/class-wp-customize-manager.php:1120
 #: wp-includes/class-wp-editor.php:953 wp-includes/media-template.php:603
 #: wp-includes/media-template.php:834 wp-includes/media-template.php:900
 msgid "Center"
 msgstr "Centro"
 
-#: wp-includes/class-wp-customize-manager.php:1144
+#: wp-includes/class-wp-customize-manager.php:1121
 #: wp-includes/class-wp-editor.php:954 wp-includes/media-template.php:606
 #: wp-includes/media-template.php:837 wp-includes/media-template.php:903
 msgid "Right"

@@ -1,5 +1,0 @@
-[30-Jan-2015 01:16:27 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/leticiam/public_html/z_teste/elianevelozo_wp/wp-includes/comment.php on line 1309
-[30-Jan-2015 01:16:36 UTC] PHP Fatal error:  Call to undefined function wp_suspend_cache_addition() in /home/leticiam/public_html/z_teste/elianevelozo_wp/wp-includes/cache.php on line 377
-[30-Jan-2015 01:16:36 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'wp_ob_end_flush_all' not found or invalid function name in /home/leticiam/public_html/z_teste/elianevelozo_wp/wp-includes/plugin.php on line 496
-[30-Jan-2015 01:16:44 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/leticiam/public_html/z_teste/elianevelozo_wp/wp-includes/link-template.php on line 3301
-[30-Jan-2015 01:17:09 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/leticiam/public_html/z_teste/elianevelozo_wp/wp-includes/wp-db.php on line 738

@@ -10,6 +10,12 @@ msgstr ""
 "X-Generator: GlotPress/1.0-alpha-1000\n"
 "Project-Id-Version: Development\n"
 
+#: views/config.php:97
+msgid "Spam in the <a href=\"%s\">spam folder</a> older than 1 day is deleted automatically."
+msgid_plural "Spam in the <a href=\"%1$s\">spam folder</a> older than %2$d days is deleted automatically."
+msgstr[0] "Mensagens na <a href=\"%s\">caixa de spam</a> mais antigas que 1 dia são deletadas automaticamente."
+msgstr[1] "Mensagens na <a href=\"%1$s\">caixa de spam</a> mais antigas que %2$d dias são deletadas automaticamente."
+
 #: class.akismet-admin.php:700
 msgid "Please check your <a href=\"%s\">Akismet configuration</a> and contact your web host if problems persist."
 msgstr "Verifique sua <a href=\"%s\">configuração do Akismet</a> e entre em contato com seu provedor se o problema persistir."
@@ -105,6 +111,10 @@ msgstr "Você está usando sua chave do Akismet em mais chaves do que sua inscri
 #: views/notice.php:98
 msgid "You're using Akismet on far too many sites for your Pro subscription."
 msgstr "Você está usando o Askimet em sites demais para sua assinatura Pro."
+
+#: views/notice.php:96
+msgid "If you would like to use Akismet on more than 10 sites, you will need to <a href=\"%s\" target=\"_blank\">upgrade to an Enterprise subscription</a>. If you have any questions, please <a href=\"%s\" target=\"_blank\">get in touch with our support team</a>"
+msgstr "Se quiser usar o Akismet em mais de 10 sites, você precisará <a href=\"%s\" target=\"_blank\">atualizá-lo para uma assinatura Empresarial</a>. Em caso de dúvida, <a href=\"%s\" target=\"_blank\">entre em contato com nossa equipe de suporte</a>"
 
 #: views/notice.php:99
 msgid "To continue your service, <a href=\"%s\" target=\"_blank\">upgrade to an Enterprise subscription</a>, which covers an unlimited number of sites. Please <a href=\"%s\" target=\"_blank\">contact our support team</a> with any questions."
@@ -364,8 +374,6 @@ msgstr "O Akismet foi incapaz de verificar este comentário (resposta: %s) e ten
 msgid "View comment history"
 msgstr "Ver histórico de comentários"
 
-#. #-#-#-#-#  akismet.pot (Akismet 3.0.5b1)  #-#-#-#-#
-#. Plugin Name of the plugin/theme
 #: class.akismet-admin.php:76 class.akismet-admin.php:78
 #: class.akismet-admin.php:757 views/config.php:3
 msgid "Akismet"
