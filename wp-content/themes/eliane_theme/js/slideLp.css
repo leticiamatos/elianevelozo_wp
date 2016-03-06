@@ -1,0 +1,72 @@
+/* wrapHighlight */
+.wrapHighlight {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* listCont */
+.wrapHighlight .listCont {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.wrapHighlight .listCont li {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+
+.wrapHighlight .listCont li .cont {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapHighlight .listCont li.active {
+    display: block;
+    z-index: 10;
+}
+
+.wrapHighlight .listCont li.active .cont {
+    width: 0%;
+    left: 0;
+}
+
+
+/* wrapCounter */
+#wrapCounter {
+    background: #1A2F41;
+    width: 100%;
+    height: 4px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 900;
+}
+
+#wrapCounter .counterLine {
+    background: #fff;
+    width: 0%;
+    height: 4px;
+    display: block;
+    border-right: 1px solid #213C54;
+    overflow: hidden;
+}
+
+/* responsiveLp */
+.responsiveLp img {
+    /*width: 100%;*/
+}
+
+
