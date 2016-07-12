@@ -98,9 +98,22 @@ function html5blank_header_scripts()
         wp_register_script('modernizr', get_template_directory_uri() . '/js/lib/modernizr-2.7.1.min.js', array(), '2.7.1'); // Modernizr
         wp_enqueue_script('modernizr'); // Enqueue it!
 
-        wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
-        wp_enqueue_script('html5blankscripts'); // Enqueue it!
     }
+
+    wp_register_script('jquery', get_template_directory_uri() . '/js/jquery.min.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('jquery'); // Enqueue it!
+
+
+    wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
+    wp_enqueue_script('html5blankscripts'); // Enqueue it!
+    
+
+    wp_register_script('highlight', get_template_directory_uri() . '/js/highlight.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('highlight'); // Enqueue it!
+
+
+    wp_register_script('slideLp', get_template_directory_uri() . '/js/slideLp.js', array(), '1.0.0'); // Custom scripts
+    wp_enqueue_script('slideLp'); // Enqueue it!
 }
 
 // Load HTML5 Blank conditional scripts
@@ -118,10 +131,18 @@ function html5blank_styles()
     wp_register_style('normalize', get_template_directory_uri() . '/normalize.css', array(), '1.0', 'all');
     wp_enqueue_style('normalize'); // Enqueue it!
 
+
     wp_register_style('reset', get_template_directory_uri() . '/style/reset.css', array(), '1.0', 'all');
     wp_enqueue_style('reset'); // Enqueue it!
+
+
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
+
+
+    wp_register_style('slideLpcss', get_template_directory_uri() . '/js/slideLp.css', array(), '1.0', 'all');
+    wp_enqueue_style('slideLpcss'); // Enqueue it!
+
 }
 
 // Register HTML5 Blank Navigation
@@ -449,6 +470,38 @@ function html5_shortcode_demo($atts, $content = null)
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
+}
+
+
+function createGallery($post_id){
+    $post_cntt = get_the_content($post_id);
+
+    preg_match('/\[gallery.*ids=.(.*).\]/', $post_cntt, $ids);
+    $image_ids = explode(",", $ids[1]); // Get all image ids from short code
+    $images = array_slice($image_ids,0,3);
+
+    if($images):
+        $image_list = '<ul class="bxslider">';
+
+        foreach($image_ids as $image_id) :
+
+            $attachment = get_post( $image_id );
+            $url =         $attachment->guid;
+            $caption =     get_post_field('post_excerpt', $attachment->ID);
+            // echo $image_id;
+            // echo $url;
+            // echo '</br>';
+            // echo $caption;
+            // echo '</br>';
+
+            $image_list .= '<li class="gallery-item"><a data-fancybox-group="galleria" class="fancybox" href="' . $url . '" alt="'. $caption .'"><img src="' . $url . '" alt="'. $caption .'" /></a>' . '</li>';               
+        endforeach;
+
+    else:
+        $image_list .= '<h5> Projeto sem imagens... </h5>';
+    endif;
+        $image_list .= '</ul>';
+        echo $image_list;
 }
 
 ?>

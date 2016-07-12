@@ -1045,7 +1045,7 @@ function gallery_shortcode( $attr ) {
 	$size_class = sanitize_html_class( $atts['size'] );
 
 	$gallery_div .= "
-    <section id='highlight'>
+    <section class='highlight'>
        <section class='wrapHighlight'>
           <ul class='listCont'>";
 

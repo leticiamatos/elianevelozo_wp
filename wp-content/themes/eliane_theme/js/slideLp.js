@@ -1032,7 +1032,7 @@ if(options.fullScreen){
         height: "100%"
       });
 
-      function liSizeWidth(){
+      function fnct_liSizeWidth(){
         $liW = $this.parent().width();
 
         $li.css({
@@ -1054,14 +1054,14 @@ if(options.fullScreen){
           });
         }
       }
-      liSizeWidth();
+      fnct_liSizeWidth();
 
       $(window).bind({
         load: function(){
-          liSizeWidth();
+          fnct_liSizeWidth();
         },
         resize: function(){
-          liSizeWidth();
+          fnct_liSizeWidth();
         }
       });
 
@@ -1315,7 +1315,7 @@ if(options.fullScreen){
         height: "100%"
       });
 
-      function liSizeWidth(){
+      function fnct_liSizeWidth(){
         $liW = $this.parent().width();
         $li.css({
           float: "left",
@@ -1323,14 +1323,14 @@ if(options.fullScreen){
           width: $liW + "px"
         });
       }
-      liSizeWidth();
+      fnct_liSizeWidth();
 
       $(window).bind({
         load: function(){
-          liSizeWidth();
+          fnct_liSizeWidth();
         },
         resize: function(){
-          liSizeWidth();
+          fnct_liSizeWidth();
         }
       });
 

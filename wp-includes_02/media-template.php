@@ -1192,7 +1192,7 @@ function wp_print_media_templates() {
 	<script type="text/html" id="tmpl-editor-gallery">
 		<# if ( data.attachments ) { #>
 
-		<section id="highlight">
+		<section class="highlight">
 			<section class="wrapHighlight">
 				<ul class="listCont">
 

@@ -38,11 +38,15 @@
 		</section>
 		<!-- /section -->
 
-	</main>
+<!-- as galerias são montadas atraves do wp-includes/meta.php -->
 
-<script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/slideLp.js" type="text/javascript"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/js/highlight.js" type="text/javascript"></script>
-<link href="<?php echo get_template_directory_uri(); ?>/js/slideLp.css"  rel='stylesheet' type='text/css'>
+
+
+	</main>
+<!-- 
+<script src="<?php //echo get_template_directory_uri(); ?>/js/jquery.min.js" type="text/javascript"></script>
+<script src="<?php //echo get_template_directory_uri(); ?>/js/slideLp.js" type="text/javascript"></script>
+<script src="<?php //echo get_template_directory_uri(); ?>/js/highlight.js" type="text/javascript"></script>
+<link href="<?php //echo get_template_directory_uri(); ?>/js/slideLp.css"  rel='stylesheet' type='text/css'> -->
 
 <?php get_footer(); ?>

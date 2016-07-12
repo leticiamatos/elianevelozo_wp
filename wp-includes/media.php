@@ -1045,8 +1045,12 @@ function gallery_shortcode( $attr ) {
 	}
 
 	$size_class = sanitize_html_class( $atts['size'] );
-	$gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
+	// $gallery_div = "<div id='$selector' class='gallery galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>";
 
+	$gallery_div .= "
+    <section class='highlight'>
+       <section class='wrapHighlight'>
+          <ul class='listCont'>";
 	/**
 	 * Filter the default gallery shortcode CSS styles.
 	 *
@@ -1064,7 +1068,8 @@ function gallery_shortcode( $attr ) {
 		if ( ! empty( $atts['link'] ) && 'file' === $atts['link'] ) {
 			$image_output = wp_get_attachment_link( $id, $atts['size'], false, false, false, $attr );
 		} elseif ( ! empty( $atts['link'] ) && 'none' === $atts['link'] ) {
-			$image_output = wp_get_attachment_image( $id, $atts['size'], false, $attr );
+			// $image_output = wp_get_attachment_image( $id, $atts['size'], false, $attr );
+			$image_output = "<img src='".wp_get_attachment_url( $id )."' />";
 		} else {
 			$image_output = wp_get_attachment_link( $id, $atts['size'], true, false, false, $attr );
 		}
@@ -1074,30 +1079,37 @@ function gallery_shortcode( $attr ) {
 		if ( isset( $image_meta['height'], $image_meta['width'] ) ) {
 			$orientation = ( $image_meta['height'] > $image_meta['width'] ) ? 'portrait' : 'landscape';
 		}
-		$output .= "<{$itemtag} class='gallery-item'>";
-		$output .= "
-			<{$icontag} class='gallery-icon {$orientation}'>
-				$image_output
-			</{$icontag}>";
+		// $output .= "<{$itemtag} class='gallery-item'>";
+		// $output .= "
+		// 	<{$icontag} class='gallery-icon {$orientation}'>
+		// 		$image_output
+		// 	</{$icontag}>";
+		$output .= '<li><div class="img_table"><div class="img_table-cell">'. $image_output .'.</div></div>';
 		if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= "
-				<{$captiontag} class='wp-caption-text gallery-caption' id='$selector-$id'>
-				" . wptexturize($attachment->post_excerpt) . "
-				</{$captiontag}>";
+			// $output .= "
+			// 	<{$captiontag} class='wp-caption-text gallery-caption' id='$selector-$id'>
+			// 	" . wptexturize($attachment->post_excerpt) . "
+			// 	</{$captiontag}>";
+			$output .= '<div class="title_lp">' . wptexturize($attachment->post_excerpt) . '</div>';
+
 		}
-		$output .= "</{$itemtag}>";
-		if ( ! $html5 && $columns > 0 && ++$i % $columns == 0 ) {
-			$output .= '<br style="clear: both" />';
-		}
+		// $output .= "</{$itemtag}>";
+		$output .= "</li>";
+
+		// if ( ! $html5 && $columns > 0 && ++$i % $columns == 0 ) {
+		// 	$output .= '<br style="clear: both" />';
+		// }
 	}
 
-	if ( ! $html5 && $columns > 0 && $i % $columns !== 0 ) {
-		$output .= "
-			<br style='clear: both' />";
-	}
+	// if ( ! $html5 && $columns > 0 && $i % $columns !== 0 ) {
+	// 	$output .= "
+	// 		<br style='clear: both' />";
+	// }
 
-	$output .= "
-		</div>\n";
+	// $output .= "
+	// 	</div>\n";
+
+	$output .= '</ul></section></section>';
 
 	return $output;
 }
